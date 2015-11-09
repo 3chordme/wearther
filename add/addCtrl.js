@@ -4,19 +4,20 @@ angular.module('weartherApp')
 
     $scope.test2 = 'Scope Two Initialized.';
 
-
-    console.log("$scope.temperature is", $scope.temperature);
-    console.log("$scope.main is", $scope.main);
     //gets info from <dir-current-weather> because added to scope in dirCurrentWeather.js
 
-    function submitWearther() {
+    $scope.submitWearther = function() {
+      console.log('submitWearther has fired');
       var newWeartherObject = {
         temperature: $scope.temperature,
         main: $scope.main,
         clothing: $scope.newOutfit,
         comfortLevel: $scope.comfortLevel, //use radio buttons
       };
+      console.log(newWeartherObject);
     }
+
+
 
     //upon hitting submit, generate a new object with current weather info
     //and user input, and add that object to the firebase array.
