@@ -10,11 +10,11 @@ angular.module('weartherApp')
         .then(function(response) {
           console.log(response);
 
-          //need temperature (not in Kelvin) and weather description.
-          var weather = response.data.weather[0].description;
+          var main = response.data.weather[0].main;
           var tempKelvin = response.data.main.temp;
-          var tempF;  //do the math to change to fahrenheit.
-          var weatherObject = {weather, tempKelvin};
+          var tempF = Math.round(tempKelvin * 9 / 5 - 459.67);
+
+          var weatherObject = {tempF, main};
           console.log(weatherObject);
           deferred.resolve(weatherObject);
         });
@@ -24,7 +24,3 @@ angular.module('weartherApp')
     }
 
     });
-
-
-
-  });

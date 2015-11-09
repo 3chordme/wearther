@@ -1,4 +1,44 @@
 /*style.css*/
-body {
+
+html {
   font-family: helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
 }
+
+body, .wrapper, .content, .background {
+  height: 100%;
+  width: 100%;
+}
+
+  header {
+    background-color: lightBlue;
+    height: 80px;
+    width: 100%;
+  }
+
+    header > h4 {
+      color: white;
+      text-align: center;
+      line-height: 80px;
+    }
+
+  .background {
+    background-color: #EEE;
+    height: 100%;
+  }
+
+  .topSpacer {
+    height: 20px;
+  }
+
+  .leftSpacer {
+    width: 100px;
+    color: red;
+    display: inline-block;
+  }
+
+  .viewContainer {
+    display:inline-block;
+    background-color: white;
+  }
