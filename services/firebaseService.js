@@ -11,10 +11,16 @@ angular.module('weartherApp')
       return firebaseArray;
     };
 
-    this.addWearther = function(wearther) {
-      //console.log('addWearther $adding', wearther)
-      firebaseArray.$add(wearther);
+    this.WeartherMaker = function() {
+      
     }
+
+
+
+    this.addWearther = function(wearther) {
+      console.log('addWearther $adding', wearther)
+      firebaseArray.$add(wearther);
+    };
 
 
 

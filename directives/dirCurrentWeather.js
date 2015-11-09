@@ -4,9 +4,10 @@ angular.module('weartherApp')
     return {
       templateUrl: '/directives/dirCurrentWeatherTmpl.html',
       restrict: 'E',
-      // scope: {
-      //
-      // },
+      scope: {
+        temperature: '=',
+        main: '='
+      },
       // link: function(scope, elem, attrs) {
       //
       // }
