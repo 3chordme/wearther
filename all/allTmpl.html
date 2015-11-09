@@ -13,6 +13,7 @@
       <li>Weather: {{ wearther.temperature }}&deg; | {{ wearther.main }}</li>
       <li>Outfit: {{ wearther.outfit }}</li>
       <li>Was: {{ wearther.comfortLevel }}</li>
+      <input type="button" ng-click="wearthers.$remove(wearther)" value="Delete">
     </ul>
   </div>
 </div>
