@@ -1,0 +1,26 @@
+<!-- allTmpl.html -->
+<h1>All</h1>
+
+<p>Log of previous entries here.</p>
+
+<p>
+  Test 3: {{ test3 }}
+</p>
+
+<div class="wearthers">
+  <div class="wearther" ng-repeat="wearther in wearthers">
+    <ul>
+      <li>Weather: {{ wearther.temperature }}&deg; | {{ wearther.description }}</li>
+      <li>Outfit: {{ wearther.outfit }}</li>
+      <li>Was: {{ wearther.comfortLevel }}</li>
+    </ul>
+  </div>
+</div>
+
+<hr/>
+
+<div class="nav">
+  <a ui-sref="home">Home</a>
+  <a ui-sref="add">Add</a>
+  <a ui-sref="all">All</a>
+</div>

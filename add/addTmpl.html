@@ -1,0 +1,37 @@
+<!-- addTmpl.html -->
+<h1>Add</h1>
+
+<p>Current Weather: 65 degrees, Cloudy.</p>
+
+<p>
+  Test 2: {{ test2 }}
+</p>
+
+<form class="newForm">
+  <div class="newOutfit">
+    What are you wearing?
+    <div class="newOutfitInput">
+      <input type="text" name="newOutfit" ng-model="newOutfit" placeholder="What are you wearing?">
+    </div>
+  </div>
+  <div class="comfortLevel">
+    How do you feel?
+    <div class="comfortLevelButtons">
+      <input type="button" name="tooHot" value="Too Hot"> |
+      <input type="button" name="tooCold" value="Too Cold"> |
+      <input type="button" name="comfy" value="Comfy">
+    </div>
+  </div>
+  <div>
+    <input type="button" name="submitEntry" value="Submit">
+  </div>
+</form>
+
+
+<hr/>
+
+<div class="nav">
+  <a ui-sref="home">Home</a>
+  <a ui-sref="add">Add</a>
+  <a ui-sref="all">All</a>
+</div>
