@@ -8,14 +8,14 @@ angular.module('weartherApp')
 
       $http.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=080c36fce479d131e2b94a6197b9b31c')
         .then(function(response) {
-          console.log(response);
+          //console.log(response);
 
           var main = response.data.weather[0].main;
           var tempKelvin = response.data.main.temp;
           var tempF = Math.round(tempKelvin * 9 / 5 - 459.67);
 
           var weatherObject = {tempF, main};
-          console.log(weatherObject);
+          //console.log(weatherObject);
           deferred.resolve(weatherObject);
         });
 
