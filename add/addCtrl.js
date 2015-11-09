@@ -11,10 +11,11 @@ angular.module('weartherApp')
       var newWeartherObject = {
         temperature: $scope.temperature,
         main: $scope.main,
-        clothing: $scope.newOutfit,
+        outfit: $scope.newOutfit,
         comfortLevel: $scope.comfortLevel, //use radio buttons
       };
       console.log(newWeartherObject);
+      firebaseService.addWearther(newWeartherObject);
     }
 
 
