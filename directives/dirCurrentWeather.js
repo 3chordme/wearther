@@ -15,7 +15,7 @@ angular.module('weartherApp')
         weatherService.getWeather("Provo")
           .then(function(response){
             $scope.currentWeather = response;
-            $scope.temperature = $scope.currentWeather.tempF;
+            $scope.temperature = $scope.currentWeather.tempF; //why isn't this working always????
             $scope.main = $scope.currentWeather.main;
           });
 

@@ -38,6 +38,7 @@ angular.module('weartherApp')
       for (var i = 0; i < arr.length; i++) {
         console.log('Loop #' + i + ' diff is ' + diff + ' arr[i].temperature is ' + arr[i].temperature);
         //when home is clicked, diff is NaN because $scope.temperature is undefined
+        //check promise in dirCurrentWeather.js
         if (Math.abs($scope.temperature - arr[i].temperature) <= diff) {
           diff = Math.abs($scope.temperature - arr[i].temperature);
           match = arr[i];
