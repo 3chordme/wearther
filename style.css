@@ -1,16 +1,13 @@
 /*style.css*/
-* {
-  margin: 4px;
-  padding: 0px;
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 html {
   font-family: helvetica, sans-serif;
-  height: 100%;
-  width: 100%;
-}
-
-body, .wrapper, .content, .background {
   height: 100%;
   width: 100%;
 }
@@ -21,16 +18,22 @@ body, .wrapper, .content, .background {
     width: 100%;
   }
 
-    header > h3 {
-      color: white;
+    .logoOval {
+      height: 30px;
+      width: 120px;
+      background-color: white;
+      border-radius: 15px;
+      margin: 0 auto;
       text-align: center;
-      line-height: 80px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
-  .background {
-    background-color: #EEE;
-    height: 100%;
-  }
+    header h3 {
+      color: lightblue;
+      line-height: 30px;
+    }
 
   .topSpacer {
     height: 20px;
@@ -42,6 +45,9 @@ body, .wrapper, .content, .background {
   }
 
   .viewContainer {
-    display:inline-block;
-    background-color: white;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);;
+    border-radius: 20px;
+    border: 2px solid lightblue;
+    padding: 20px;
   }

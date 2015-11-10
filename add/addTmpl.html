@@ -11,15 +11,15 @@
   <div class="newOutfit">
     What are you wearing?
     <div class="newOutfitInput">
-      <input type="text" ng-model="newOutfit" placeholder="What are you wearing?">
+      <input type="text" ng-model="newOutfit" placeholder="What are you wearing?" required>
     </div>
   </div>
   <div class="comfortLevel">
     How do you feel?
     <div class="comfortLevelButtons">
-      <label><input type="radio" ng-model="comfortLevel" value="Too Hot"> Too Hot</label>
-      <label><input type="radio" ng-model="comfortLevel" value="Too Cold"> Too Cold</label>
-      <label><input type="radio" ng-model="comfortLevel" value="Comfy"> Comfy</label>
+      <label><input type="radio" ng-model="comfortLevel" value="Too Hot" required> Too Hot</label>
+      <label><input type="radio" ng-model="comfortLevel" value="Too Cold" required> Too Cold</label>
+      <label><input type="radio" ng-model="comfortLevel" value="Comfy" required> Comfy</label>
     </div>
   </div>
   <div>

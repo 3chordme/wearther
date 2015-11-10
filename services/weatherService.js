@@ -12,9 +12,9 @@ angular.module('weartherApp')
 
           var main = response.data.weather[0].main;
           var tempKelvin = response.data.main.temp;
-          var tempF = Math.round(tempKelvin * 9 / 5 - 459.67);
+          var temperature = Math.round(tempKelvin * 9 / 5 - 459.67);
 
-          var weatherObject = {tempF, main};
+          var weatherObject = {temperature, main};
           //console.log(weatherObject);
           deferred.resolve(weatherObject);
         });
