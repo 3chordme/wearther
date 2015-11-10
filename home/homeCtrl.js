@@ -25,7 +25,7 @@ angular.module('weartherApp')
       var diff = Math.abs($scope.temperature - arr[0].temperature);
 
       for (var i = 0; i < arr.length; i++) {
-        console.log('Loop #' + i + ' diff is ' + diff + ' arr[i].temperature is ' + arr[i].temperature);
+        //console.log('Loop #' + i + ' diff is ' + diff + ' arr[i].temperature is ' + arr[i].temperature);
 
         if (Math.abs($scope.temperature - arr[i].temperature) <= diff) {
           diff = Math.abs($scope.temperature - arr[i].temperature);
