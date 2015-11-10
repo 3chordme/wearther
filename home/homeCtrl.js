@@ -1,6 +1,6 @@
 // homeCtrl.js
 angular.module('weartherApp')
-  .controller('homeCtrl', function($scope, firebaseService){
+  .controller('homeCtrl', function($scope, firebaseService, weatherService){
 
     var firebaseArray = firebaseService.getFirebaseArray();
     console.log('firebaseArray[0] is', firebaseArray[0]);
@@ -8,9 +8,20 @@ angular.module('weartherApp')
 
     firebaseArray.$loaded()
       .then(function(data) {
-        console.log('then() has fulfilled'); // true
-        $scope.match = search(data);
-        console.log('according to promise match is', $scope.match)
+        console.log('then() has fulfilled');
+        weatherService.getWeather("Provo")
+          .then(function(response){
+            console.log('response is running');
+            //console.log('$scope.currentWeather.tempF is ', $scope.currentWeather.tempF)
+            $scope.currentWeather = response;
+            $scope.temperature = $scope.currentWeather.tempF; //why isn't this working always????
+            //set a default look into resolve
+            console.log('$scope.currentWeather.tempF is' + $scope.currentWeather.tempF);
+            //only gets a value assigned AFTER the page changes.
+            $scope.main = $scope.currentWeather.main;
+            $scope.match = search(data);
+            console.log('according to promise match is', $scope.match)
+          });
       })
       .catch(function(error) {
         console.error("Error:", error);
