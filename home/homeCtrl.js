@@ -11,7 +11,7 @@ angular.module('weartherApp')
         weatherService.getWeather("Provo")
           .then(function(response){
             $scope.currentWeather = response;
-            $scope.temperature = $scope.currentWeather.tempF;
+            $scope.temperature = $scope.currentWeather.temperature;
             $scope.main = $scope.currentWeather.main;
             $scope.match = search(data);
           });
