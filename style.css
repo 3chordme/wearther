@@ -1,4 +1,8 @@
 /*style.css*/
+* {
+  margin: 4px;
+  padding: 0px;
+}
 
 html {
   font-family: helvetica, sans-serif;

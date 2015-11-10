@@ -2,10 +2,7 @@
 angular.module('weartherApp')
   .controller('addCtrl', function($scope, firebaseService, $state){
 
-    $scope.test2 = 'Scope Two Initialized.';
-
     //gets info from <dir-current-weather> because added to scope in dirCurrentWeather.js
-
     $scope.submitWearther = function() {
       console.log('submitWearther has fired');
       var newWeartherObject = {
@@ -19,9 +16,5 @@ angular.module('weartherApp')
       $state.go('all');
     }
 
-
-
-    //upon hitting submit, generate a new object with current weather info
-    //and user input, and add that object to the firebase array.
 
   });

@@ -2,10 +2,6 @@
 angular.module('weartherApp')
   .controller('homeCtrl', function($scope, firebaseService){
 
-    $scope.test1 = 'Scope One Initialized.';
-
-    //function that looks for the closest match to the current temp,
-    //and displays that data.
     var firebaseArray = firebaseService.getFirebaseArray();
     console.log('firebaseArray[0] is', firebaseArray[0]);
     //problem is that the firebase object isn't loading soon enough, so it is undefined here
