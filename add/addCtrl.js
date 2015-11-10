@@ -1,6 +1,6 @@
 // addCtrl.js
 angular.module('weartherApp')
-  .controller('addCtrl', function($scope, firebaseService){
+  .controller('addCtrl', function($scope, firebaseService, $state){
 
     $scope.test2 = 'Scope Two Initialized.';
 
@@ -16,6 +16,7 @@ angular.module('weartherApp')
       };
       console.log(newWeartherObject);
       firebaseService.addWearther(newWeartherObject);
+      $state.go('all');
     }
 
 
