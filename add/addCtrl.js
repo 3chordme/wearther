@@ -4,6 +4,7 @@ angular.module('weartherApp')
 
     weatherService.getWeather("Provo")
       .then(function(response){
+        $scope.date = new Date();
         $scope.currentWeather = response;
         $scope.temperature = $scope.currentWeather.temperature;
         $scope.main = $scope.currentWeather.main;
@@ -12,6 +13,7 @@ angular.module('weartherApp')
     $scope.submitWearther = function() {
       console.log('submitWearther has fired');
       var newWeartherObject = {
+        date: new Date(),
         temperature: $scope.temperature,
         main: $scope.main,
         outfit: $scope.newOutfit,

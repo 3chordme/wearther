@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-  background: no-repeat center/100% url('assets/images/clouds.jpg');
+  background: url('assets/images/clouds.jpg') no-repeat center center fixed;
 
   /*background-size: cover;*/
 }
@@ -25,7 +25,7 @@ body {
 
     .logoOval {
       height: 44px;
-      width: 130px;
+      width: 140px;
       background-color: white;
       border-radius: 22px;
       text-align: center;
@@ -33,20 +33,21 @@ body {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
+      line-height: 44px;
     }
 
     header h3 {
       color: lightblue;
-      line-height: 44px;
+      font-size: 25px;
     }
 
   .main {
-    padding: 15px 50px;
+    padding: 25px 50px;
   }
 
   .viewContainer {
-    background-color: rgba(255, 255, 255, 0.1);;
-    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /*border-radius: 20px;*/
     border: 2px solid lightblue;
     padding: 20px;
     float: left;
@@ -75,7 +76,7 @@ body {
 
   .tempCircle span {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", helvetica, sans-serif;
-    font-weight: 100;
+    font-weight: 800;
     font-size: 35px;
   }
 
@@ -86,18 +87,14 @@ body {
   }
 
   .largeText {
-    /*border: 1px solid black;*/
     font-weight: bold;
     color: white;
     font-size: 100px;
-    line-height: 80px;
+    line-height: 140px;
     display: inline-block;
-    padding: 0 0 0 40px;
+    padding: 100px 0 0 60px;
     float: left;
-  }
-
-  .largeText p {
-    /*mix-blend-mode: multiply;*/
+    font-kerning: normal;
   }
 
   h6 {
@@ -116,3 +113,36 @@ body {
     border: solid 1px #707070;
     box-shadow: 0 0 5px 1px #969696;
   }
+
+  input[type="button"] {
+    width: 100%;
+    cursor: pointer;
+    height: 30px;
+    background: #FFF;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .match {
+    border: 1px solid white;
+    padding: 5px 0 0 15px;
+    position: relative;
+    top: -10px;
+  }
+
+    .hot-ng {
+      background-color: rgba(255, 0, 0, .3);
+      color: pink;
+    }
+
+    .cold-ng {
+      background-color: rgba(50, 100, 225, .3);
+      color: lightblue;
+    }
+
+    .comfy-ng {
+      background-color: rgba(255, 255, 255, .2);
+      color: white;
+    }

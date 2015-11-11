@@ -1,5 +1,5 @@
 <!-- homeTmpl.html -->
-<h1>Home</h1>
+<h1 class="state">Home</h1>
 
 <hr/>
 
@@ -9,8 +9,8 @@
 
 <hr/>
 
-<h6>THE CLOSEST MATCH IS:</h6>
-<div class="closestMatch">
+<h6 class="match-text">THE CLOSEST MATCH IS:</h6>
+<div class="match" ng-class="match.comfortLevel === 'Too Cold' ? 'cold-ng' : (match.comfortLevel === 'Too Hot' ? 'hot-ng' : 'comfy-ng')">
   <p>
     {{ match.temperature }}&deg;
     {{ match.main }}
