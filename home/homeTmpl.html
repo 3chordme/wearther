@@ -7,20 +7,22 @@
   <dir-current-weather temperature="temperature" main="main"></dir-current-weather>
 </div>
 
-<hr/>
+<div class="clear">
+  <hr/>
 
-<h6 class="match-text">THE CLOSEST MATCH IS:</h6>
-<div class="match" ng-class="match.comfortLevel === 'Too Cold' ? 'cold-ng' : (match.comfortLevel === 'Too Hot' ? 'hot-ng' : 'comfy-ng')">
-  <p>
-    {{ match.temperature }}&deg;
-    {{ match.main }}
-  </p>
-  <p>
-    {{ match.outfit }}
-  </p>
-  <p>
-    {{ match.comfortLevel }}
-  </p>
+  <h6 class="match-text">THE CLOSEST MATCH IS:</h6>
+  <div class="match" ng-class="match.comfortLevel === 'Too Cold' ? 'cold-ng' : (match.comfortLevel === 'Too Hot' ? 'hot-ng' : 'comfy-ng')">
+    <p>
+      {{ match.temperature }}&deg;
+      {{ match.main }}
+    </p>
+    <p>
+      {{ match.outfit }}
+    </p>
+    <p>
+      {{ match.comfortLevel }}
+    </p>
+  </div>
 </div>
 
 <div class="nav">
