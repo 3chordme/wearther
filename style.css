@@ -77,7 +77,7 @@ body {
 
   .mainCircle {
     border: 1px solid lightblue;
-    color: lightblue;
+    color: white;
     text-align: center;
   }
 
@@ -203,3 +203,13 @@ body {
         font-size: 13px;
         text-align: center;
       }
+footer {
+  font-size: 9px;
+  clear: both;
+  text-align: right;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: white;
+  /*border: 1px solid black;*/
+}
