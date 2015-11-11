@@ -1,4 +1,5 @@
 /*style.css*/
+
 html {
   box-sizing: border-box;
 }
@@ -6,10 +7,13 @@ html {
   box-sizing: inherit;
 }
 
-html {
+body {
   font-family: helvetica, sans-serif;
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url('assets/images/clouds.jpg');
 }
 
   header {
@@ -23,8 +27,8 @@ html {
       width: 120px;
       background-color: white;
       border-radius: 15px;
-      margin: 0 auto;
       text-align: center;
+      margin: 0px auto;
       position: relative;
       top: 50%;
       transform: translateY(-50%);
@@ -50,4 +54,44 @@ html {
     border-radius: 20px;
     border: 2px solid lightblue;
     padding: 20px;
+  }
+
+  .tempCircle, .mainCircle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0 10px 15px 10px;
+  }
+
+  .tempCircle {
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+  }
+
+  .mainCircle {
+    border: 1px solid lightblue;
+    color: lightblue;
+    text-align: center;
+  }
+
+  .tempCircle h3 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+  }
+
+  .mainCircle h4 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+  }
+
+  .largeText {
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 80px;
+    display: inline-block;
+    padding: 0 0 0 40px;
   }
