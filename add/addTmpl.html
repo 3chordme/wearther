@@ -9,13 +9,13 @@
 
 <form class="newForm">
   <div class="newOutfit">
-    What are you wearing?
+    <p><h6>What are you wearing?</p></h6>
     <div class="newOutfitInput">
-      <input type="text" ng-model="newOutfit" placeholder="What are you wearing?" required>
+      <input type="text" ng-model="newOutfit" placeholder="Ex: Jeans, T-shirt, Jacket" class="focus" required>
     </div>
   </div>
   <div class="comfortLevel">
-    How do you feel?
+    <p><h6>How do you feel?</p></h6>
     <div class="comfortLevelButtons">
       <label><input type="radio" ng-model="comfortLevel" value="Too Hot" required> Too Hot</label>
       <label><input type="radio" ng-model="comfortLevel" value="Too Cold" required> Too Cold</label>
@@ -23,7 +23,7 @@
     </div>
   </div>
   <div>
-    <input type="button" ng-click="submitWearther()" value="Submit">
+    <input type="button" ng-click="submitWearther()" value="Add Outfit">
   </div>
 </form>
 

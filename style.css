@@ -1,19 +1,20 @@
 /*style.css*/
-
-html {
+* {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", helvetica, sans-serif;
   box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
-}
 
-body {
-  font-family: helvetica, sans-serif;
+html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  background-image: url('assets/images/clouds.jpg');
+}
+
+body {
+  background: no-repeat center/100% url('assets/images/clouds.jpg');
+
+  /*background-size: cover;*/
 }
 
   header {
@@ -23,10 +24,10 @@ body {
   }
 
     .logoOval {
-      height: 30px;
-      width: 120px;
+      height: 44px;
+      width: 130px;
       background-color: white;
-      border-radius: 15px;
+      border-radius: 22px;
       text-align: center;
       margin: 0px auto;
       position: relative;
@@ -36,32 +37,28 @@ body {
 
     header h3 {
       color: lightblue;
-      line-height: 30px;
+      line-height: 44px;
     }
 
-  .topSpacer {
-    height: 20px;
-  }
-
-  .leftSpacer {
-    width: 100px;
-    display: inline-block;
+  .main {
+    padding: 15px 50px;
   }
 
   .viewContainer {
-    display: inline-block;
     background-color: rgba(255, 255, 255, 0.1);;
     border-radius: 20px;
     border: 2px solid lightblue;
     padding: 20px;
+    float: left;
   }
 
   .tempCircle, .mainCircle {
     height: 100px;
     width: 100px;
     border-radius: 50px;
-    display: inline-block;
     margin: 0 10px 15px 10px;
+    float: left;
+    line-height: 100px;
   }
 
   .tempCircle {
@@ -76,22 +73,46 @@ body {
     text-align: center;
   }
 
-  .tempCircle h3 {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  .tempCircle span {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 35px;
+  }
+
+  .mainCircle span {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", helvetica, sans-serif;
     font-weight: 100;
     font-size: 20px;
   }
 
-  .mainCircle h4 {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-    font-weight: 100;
-    font-size: 14px;
-  }
-
   .largeText {
+    /*border: 1px solid black;*/
     font-weight: bold;
+    color: white;
     font-size: 100px;
     line-height: 80px;
     display: inline-block;
     padding: 0 0 0 40px;
+    float: left;
+  }
+
+  .largeText p {
+    /*mix-blend-mode: multiply;*/
+  }
+
+  h6 {
+    color: white;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: solid 1px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+  }
+
+  input[type="text"].focus {
+    border: solid 1px #707070;
+    box-shadow: 0 0 5px 1px #969696;
   }
