@@ -1,5 +1,5 @@
 <!-- addTmpl.html -->
-<h1 class="state">Add</h1>
+<h1 class="state">add</h1>
 
 <hr/>
 
@@ -10,9 +10,7 @@
 <form class="newForm">
   <div class="newOutfit">
     <p><h6>What are you wearing?</p></h6>
-    <form class="newOutfitInput">
       <input type="text" ng-model="newOutfit" placeholder="Ex: Jeans, T-shirt, Jacket" class="focus" required>
-    </form>
   </div>
   <div class="comfortLevel">
     <p><h6>How do you feel?</p></h6>
@@ -26,9 +24,6 @@
     <input type="button" ng-click="submitWearther()" value="Add Outfit">
   </div>
 </form>
-
-
-<hr/>
 
 <div class="nav">
   <a ui-sref="home">Home</a>

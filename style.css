@@ -1,7 +1,7 @@
 /*style.css*/
 * {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", helvetica, sans-serif;
-  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+  /*box-sizing: border-box;*/
 }
 
 html, body {
@@ -13,8 +13,6 @@ html, body {
 
 body {
   background: url('assets/images/clouds.jpg') no-repeat center center fixed;
-
-  /*background-size: cover;*/
 }
 
   header {
@@ -53,6 +51,15 @@ body {
     float: left;
   }
 
+  .state {
+    font-size: 20px;
+    color: lightblue;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    /*background-color: white;*/
+  }
+
   .tempCircle, .mainCircle {
     height: 100px;
     width: 100px;
@@ -75,13 +82,13 @@ body {
   }
 
   .tempCircle span {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", helvetica, sans-serif;
+    font-family: helvetica, sans-serif;
     font-weight: 800;
     font-size: 35px;
   }
 
   .mainCircle span {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", helvetica, sans-serif;
+    font-family: helvetica, sans-serif;
     font-weight: 100;
     font-size: 20px;
   }
@@ -89,12 +96,27 @@ body {
   .largeText {
     font-weight: bold;
     color: white;
-    font-size: 100px;
+    font-size: 110px;
     line-height: 140px;
     display: inline-block;
     padding: 100px 0 0 60px;
     float: left;
-    font-kerning: normal;
+    kerning: normal;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1;
+  }
+
+  @media (max-width: 1100px) {
+    .largeText {
+      font-size: 75px;
+      line-height: 100px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .largeText {
+      display: none;
+    }
   }
 
   h6 {
@@ -146,3 +168,19 @@ body {
       background-color: rgba(255, 255, 255, .2);
       color: white;
     }
+
+  .wearthers {
+    overflow: scroll;
+    height: 400px;
+    width: 200px;
+  }
+
+    .wearther {
+      padding: 1px;
+      margin: 5px auto;
+    }
+
+      .wearther p {
+        font-size: 12px;
+        text-align: center;
+      }

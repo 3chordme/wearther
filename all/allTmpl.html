@@ -1,16 +1,14 @@
 <!-- allTmpl.html -->
-<h1 class="state">All</h1>
+<h1 class="state">all</h1>
 
 <hr/>
 
 <div class="wearthers">
-  <div class="wearther" ng-repeat="wearther in wearthers">
-    <ul>
-      <li>Weather: {{ wearther.temperature }}&deg; | {{ wearther.main }}</li>
-      <li>Outfit: {{ wearther.outfit }}</li>
-      <li>Was: {{ wearther.comfortLevel }}</li>
+  <div class="wearther" ng-repeat="wearther in wearthers" ng-class="wearther.comfortLevel === 'Too Cold' ? 'cold-ng' : (wearther.comfortLevel === 'Too Hot' ? 'hot-ng' : 'comfy-ng')">
+      <p>Weather: <strong>{{ wearther.temperature }}&deg; | {{ wearther.main }}</strong></p>
+      <p>Outfit: <strong>{{ wearther.outfit }}</strong></p>
+      <p>Was: <strong>{{ wearther.comfortLevel }}</strong></p>
       <input type="button" ng-click="wearthers.$remove(wearther)" value="Delete">
-    </ul>
   </div>
 </div>
 
