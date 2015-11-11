@@ -13,9 +13,6 @@ angular.module('weartherApp')
             $scope.currentWeather = response;
             $scope.temperature = $scope.currentWeather.temperature;
             $scope.main = $scope.currentWeather.main;
-            if ($scope.main === "Clouds") {
-              $scope.main = "Cloudy";
-            }
             $scope.match = search(data);
           });
       })
