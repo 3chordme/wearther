@@ -8,7 +8,7 @@ angular.module('weartherApp')
         temperature: '=',
         main: '='
       }
-    }
+    };
 
 
   });

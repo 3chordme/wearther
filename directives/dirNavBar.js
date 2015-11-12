@@ -4,6 +4,6 @@ angular.module('weartherApp')
     return {
       templateUrl: '/directives/dirNavBarTmpl.html',
       restrict: 'E',
-    }
-    
+    };
+
   });

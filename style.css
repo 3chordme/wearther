@@ -95,6 +95,8 @@ body {
     margin: 0 10px 15px 10px;
     float: left;
     line-height: 100px;
+    position: relative;
+    right: -8px;
   }
 
   .tempCircle {
@@ -287,6 +289,11 @@ body {
         font-size: 14px;
         text-align: center;
       }
+
+    .allNav {
+      position: relative;
+      top: 4px;
+    }
 
   footer {
     font-size: 9px;
