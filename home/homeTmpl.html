@@ -12,6 +12,7 @@
 
   <h6 class="match-text">THE CLOSEST MATCH IS:</h6>
   <div class="match" ng-class="match.comfortLevel === 'Too Cold' ? 'cold-ng' : (match.comfortLevel === 'Too Hot' ? 'hot-ng' : 'comfy-ng')">
+    <div class="homeDate"><span><strong>{{ match.date }}</strong></span></div>
     <p>
       {{ match.temperature }}&deg;
       {{ match.main }}
