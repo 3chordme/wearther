@@ -13,17 +13,17 @@
 
   <div class="wrapper">
 
-    <header>
-      <div class="logoOval"><h3>wearther</h3><div>
+    <header class="fadeIn">
+      <div class="logoOval fadeIn"><h3 class="fadeIn">wearther</h3><div>
     </header>
 
     <div class="main">
 
       <!-- this holds the ui-view -->
-      <div class="viewContainer">
+      <div class="viewContainer fadeIn">
         <div ui-view></div>
       </div>
-      <div class="largeText">
+      <div class="largeText fadeInDown">
           Add outfits.
         </br>
           Get comfy.
@@ -54,6 +54,7 @@
           <script src="add/addCtrl.js"></script>
           <script src="all/allCtrl.js"></script>
           <script src="directives/dirCurrentWeather.js"></script>
+          <script src="directives/dirNavBar.js"></script>
           <script src="services/weatherService.js"></script>
           <script src="services/firebaseService.js"></script>
 
